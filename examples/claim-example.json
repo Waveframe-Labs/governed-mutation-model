@@ -1,0 +1,17 @@
+{
+  "object_id": "claim-001",
+  "object_type": "claim",
+  "state": "proposed",
+
+  "artifact": {
+    "path": "claims/claim-001.yaml",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+
+  "evidence": [
+    {
+      "path": "evidence/ev-001.yaml",
+      "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  ]
+}
