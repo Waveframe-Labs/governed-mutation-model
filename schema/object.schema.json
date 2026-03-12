@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://waveframelabs.org/schemas/mutation-object-0.1.0.json",
+  "title": "Governed Mutation Object",
+  "description": "Canonical mutation envelope for governed artifacts.",
+  "type": "object",
+
+  "required": [
+    "object_id",
+    "object_type",
+    "state",
+    "artifact"
+  ],
+
+  "properties": {
+
+    "object_id": {
+      "type": "string",
+      "description": "Stable identity for the governed object."
+    },
+
+    "object_type": {
+      "type": "string",
+      "description": "Class of governed object."
+    },
+
+    "state": {
+      "type": "string",
+      "description": "Lifecycle state of the object."
+    },
+
+    "artifact": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+
+        "path": {
+          "type": "string",
+          "description": "Artifact file path."
+        },
+
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$",
+          "description": "SHA256 hash of the artifact."
+        }
+
+      },
+      "additionalProperties": false
+    },
+
+    "evidence": {
+      "type": "array",
+      "description": "Optional supporting artifacts.",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+
+          "path": {
+            "type": "string"
+          },
+
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+
+        }
+      }
+    }
+
+  },
+
+  "additionalProperties": false
+}
