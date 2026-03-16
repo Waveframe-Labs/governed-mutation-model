@@ -6,7 +6,7 @@ domain: "governance"
 version: "0.1.0"
 status: "Active"
 created: "2026-03-12"
-updated: "2026-03-12"
+updated: "2026-03-16"
 
 author:
   name: "Shawn C. Wright"
@@ -232,4 +232,4 @@ Future revisions may expand metadata capabilities while preserving the minimal c
 
 ---
 
-© Waveframe Labs — Independent Open Science Research
+© 2026 Waveframe Labs — Independent Open Science Research
